@@ -4,7 +4,7 @@ A detailed guide for setting up Gensyn's CodeAssist on Windows 11, including com
 
 ## About This Guide
 
-This guide documents the complete installation process of Gensyn CodeAssist on Windows 11, including all errors encountered and their solutions. CodeAssist is a private, local AI coding assistant that learns from your coding style and helps you practice programming problems.
+This guide documents the complete installation process of Gensyn CodeAssist on Windows 11, including errors I encountered and their solutions. CodeAssist is a private, local AI coding assistant that learns from your coding style and helps you practice programming problems.
 
 ## What is CodeAssist?
 
@@ -159,13 +159,19 @@ uv run run.py
 2. When prompted, paste your HuggingFace token
    * Note: The token will not be visible as you type (this is normal for security)
 
+<img width="1920" height="986" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/5245e855-4a80-4d9a-a030-77425ac58d8c" />
+
 3. Wait for all containers to start. This will:
    * Create a virtual environment at `.venv`
    * Install all dependencies
    * Pull and build Docker images (this takes 20 to 25 minutes on first run)
    * Start 5 containers: Ollama, Policy Models, Web UI, State Service, Solution Tester
 
+<img width="1920" height="1017" alt="Screenshot (41)" src="https://github.com/user-attachments/assets/1b26037d-55ad-4908-87f0-c204400b2b37" />
+  
 4. Once you see "CodeAssist Started", your browser should automatically open to http://localhost:3000
+
+<img width="1920" height="965" alt="Screenshot (44)" src="https://github.com/user-attachments/assets/78bffa33-3b36-47d0-b07c-1f37e9bb30e1" />
 
 5. If the browser doesn't open automatically, manually navigate to:
 ```
@@ -175,13 +181,16 @@ http://localhost:3000
 ### Step 8: Use CodeAssist
 
 1. Log in using email (one time passcode) or Google account
+
+<img width="1920" height="962" alt="Screenshot (45)" src="https://github.com/user-attachments/assets/bc9cce8a-c5a8-462c-adab-b78688ce7be4" />
+
 2. Select a problem difficulty (Easy, Medium, or Hard) from the sidebar
-3. Start coding in the editor
+3. Start coding in the editor.( Delete all the existing code and start fresh if you get error for the problem )
 4. The assistant will begin suggesting code as you type
-5. Use `Shift+Space` to pause/unpause the assistant
+5. Use `Shift+Space` to pause/unpause the assistant or you can just press the pause button at the botton of the editor.
 
 **Tips for Best Results:**
-* Keep your cursor near the section you're working on
+* Start from fresh to keep your cursor near the section you're working on
 * Be patient and let the assistant suggest code before immediately deleting
 * Work on multiple different problems to improve training diversity
 * The assistant improves after 4 to 5 training episodes
@@ -192,6 +201,9 @@ To train your personalized model:
 
 1. After solving one or more problems, return to the terminal where CodeAssist is running
 2. Press `Ctrl+C` to stop recording and start training
+
+<img width="1920" height="1011" alt="Screenshot (46)" src="https://github.com/user-attachments/assets/65481915-6e1d-478a-ae95-4155d76faf8b" />
+
 3. Training will:
    * Compare your edits to the assistant's suggestions
    * Calculate rewards based on your interactions
@@ -200,6 +212,14 @@ To train your personalized model:
    * Upload trained models to your HuggingFace account
 
 Training typically takes 5 to 10 minutes depending on your system.
+
+<img width="1920" height="1007" alt="Screenshot (50)" src="https://github.com/user-attachments/assets/26ba8596-7add-4548-a72a-9870e8823d6a" />
+
+### Step 9: Training Your Model
+
+You can see score on the gensyn's dashboard at https://dashboard.gensyn.ai/?application=CodeAssist
+
+<img width="1920" height="894" alt="Screenshot (52)" src="https://github.com/user-attachments/assets/d26f939d-2bca-4224-89ed-f18732a57f86" />
 
 ## Common Errors and Solutions
 
@@ -338,24 +358,10 @@ codeassist/
 * Leaderboard: https://dashboard.gensyn.ai/?application=CodeAssist
 * GitHub Repository: https://github.com/gensyn-ai/codeassist
 
-## Screenshots
-
-For visual reference of each step, see the `screenshots/` directory in this repository.
-
-## Contributing
-
-If you encounter additional errors or have solutions to share, please:
-1. Fork this repository
-2. Add your findings
-3. Submit a pull request
-
 ## License
 
 This guide is provided as-is for community use. Gensyn CodeAssist itself is licensed under the MIT License.
 
-## Credits
 
-Installation tested and documented by Ram (GitHub: @ramakrishnan20)
-* System: Intel i5 11th Gen H + RTX 3050 Ti
-* Date: November 2025
-* Original Project: Gensyn AI (https://gensyn.ai)
+Made with ❤️ by Ram (X @ram_krish2000 )
+
