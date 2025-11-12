@@ -358,10 +358,5 @@ codeassist/
 * Leaderboard: https://dashboard.gensyn.ai/?application=CodeAssist
 * GitHub Repository: https://github.com/gensyn-ai/codeassist
 
-## License
-
-This guide is provided as-is for community use. Gensyn CodeAssist itself is licensed under the MIT License.
-
-
-Made with ❤️ by Ram (X @ram_krish2000 )
+Made with ❤️ by Ram
 
